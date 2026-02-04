@@ -9,3 +9,7 @@ Daily frontend practice using JavaScript.
 - Calculate total bill from cart array
 - Remove duplicates from array
 - Mini DOM task: Add and clear items from list
+## Day 3
+• Check if username already exists in array
+• Prevent duplicate and empty usernames
+• Mini DOM task: Username existence check
