@@ -13,3 +13,7 @@ Daily frontend practice using JavaScript.
 • Check if username already exists in array
 • Prevent duplicate and empty usernames
 • Mini DOM task: Username existence check
+### Day 4
+- Sorted product prices using Array.sort()
+- Implemented pass/fail logic with input validation
+- Handled form submission using preventDefault and form.elements
