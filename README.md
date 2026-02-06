@@ -17,3 +17,7 @@ Daily frontend practice using JavaScript.
 - Sorted product prices using Array.sort()
 - Implemented pass/fail logic with input validation
 - Handled form submission using preventDefault and form.elements
+- ## Day 5
+• Generated a 4-digit OTP using Math.random()  
+• Displayed OTP on button click using DOM  
+• Implemented light/dark theme
