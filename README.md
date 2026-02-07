@@ -21,3 +21,7 @@ Daily frontend practice using JavaScript.
 • Generated a 4-digit OTP using Math.random()  
 • Displayed OTP on button click using DOM  
 • Implemented light/dark theme
+### Day 6
+- Input validation (email & number)
+- Async / callback validation logic
+- Clean UI feedback
