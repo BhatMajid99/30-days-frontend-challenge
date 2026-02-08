@@ -25,3 +25,8 @@ Daily frontend practice using JavaScript.
 - Input validation (email & number)
 - Async / callback validation logic
 - Clean UI feedback
+## Day 7
+- Add income and expense
+- Separate income & expense lists
+- Calculate total balance
+
