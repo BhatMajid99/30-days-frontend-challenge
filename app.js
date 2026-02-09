@@ -1,56 +1,68 @@
-let incomeInput = document.querySelector("#income");
-let expenseInput = document.querySelector("#expense");
-let incomeBtn = document.querySelector("#incomeBtn");
-let expenseBtn = document.querySelector("#expenseBtn");
-let incomeList = document.querySelector("#incomelist");
-let expenseList = document.querySelector("#expenselist");
-let display = document.querySelector("#display");
-let balanceBtn = document.querySelector("#balanceBtn");
-let incomeArr = [];
-let expenseArr = [];
-incomeBtn.addEventListener("click", () => {
-    let income = Number(incomeInput.value);
-    if (income <= 0){
-        display.innerText = "Not a valid input!";   
-    }else{
-        incomeArr.push(income);
-        let li = document.createElement("li");
-        li.innerText = income;
-        incomeList.appendChild(li);
-        incomeInput.value = ""
-        display.innerText = "Income Added successfully."
-    }
-});
+// // Function 
+// const getdata = (dataId, getNextData) =>{
+//     setTimeout( () => {
+//         console.log("Data", dataId);
+//         if(getNextData){
+//             getNextData(dataId);
+//         }
+//     },3000);
+// }
+// // Callback Hell
+// console.log("Getting Data 1....");
+// getdata(1, () =>{
+//     console.log("Getting Data 2....");
+//     getdata(2, () =>{
+//         console.log("Getting Data 3....");
+//         getdata(3, () =>{
+//             console.log("Getting Data 4....");
+//             getdata(4)
+//         });
+//     });
+// });
 
-expenseBtn.addEventListener("click", () => {
-    let expense = Number(expenseInput.value);
-    if (expense <= 0){
-        display.innerText = "Not a valid input!";   
-    }else{
-        expenseArr.push(expense);
-        let li = document.createElement("li");
-        li.innerText = expense;
-        expenseList.appendChild(li);
-        expenseInput.value = ""
-        display.innerText = "Expense Added Successfully."
+// // ASync Await
+// async function  getdata(dataId) {
+//     return new Promise((resolve, reject) =>{
+//         setTimeout(() => {
+//             console.log("data ",dataId);
+//             if(dataId <= 5){
+//                 resolve("Sucess");
+//             }else{
+//                 reject(new Error("Data <=5 avalibe only !"));
+//             }
+//         },2000);
+//     });
+// }
+// async function run() {
+//     try{
+//         console.log("Getting Data 1....");
+//         await getdata(1);
+//         console.log("Getting Data 2....");
+//         await getdata(2);
+//         console.log("Getting Data 3....");
+//         await getdata(3);
+//         console.log("Getting Data 4....");
+//         await getdata(4); 
+//         console.log("Getting Data 5....");
+//         await getdata(5);
+//         console.log("Getting Data 6....");
+//         await getdata(6);
+//     }
+//     catch(err){
+//         console.error(err.message);
+//     }
+// }
+// run();
+let URL = "https://catfact.ninja/fact";
+async function getFact(URL) {
+    try{
+        let respone = await fetch(URL);
+        let data = await respone.json();
+        console.log(data.fact);
+    }catch(err){
+        console.error("Error : ", err)
     }
-});
 
-balanceBtn.addEventListener("click",() => {
-    if(incomeArr.length === 0 && expenseArr.length === 0){
-        display.innerText = "No data available";
-        return;
-    }
-    let balance = 0;
-    let totalIncome = 0;
-    let totalExpense = 0;
-    for(let income of incomeArr){
-       totalIncome += income;
-    }
-    for(let expense of expenseArr){
-        totalExpense += expense;
-    }
-    balance = totalIncome - totalExpense;
-    display.innerText = `Total Income: ${totalIncome} | Total Expense: ${totalExpense} | Final Balance: ${balance}`;
+}
 
-})
+getFact(URL);
