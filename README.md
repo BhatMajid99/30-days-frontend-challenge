@@ -29,4 +29,9 @@ Daily frontend practice using JavaScript.
 - Add income and expense
 - Separate income & expense lists
 - Calculate total balance
+  ## Day 8
+- Converted callback-based code into async/await
+- Practiced Promise handling with try-catch
+- Handled API error responses
+
 
