@@ -1,22 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <input type="number" id="income" placeholder="Enter income">
-    <input type="number" id="expense" placeholder="Enter Expense">
-    <button id="incomeBtn">Add Income</button>
-    <button id="expenseBtn">Add expense</button>
-    <h3>Income List</h3>
-    <ul id="incomelist"></ul>
-    <h3>Expense List</h3>
-    <ul id="expenselist"></ul>
-    <p id="display" ></p>
-    <button id="balanceBtn">Check Balance</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HyperMart</title>
+    <script
+      src="https://kit.fontawesome.com/46ff5cb17c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="heading">
+      <h1>HyperMart - Your One Stop Shopping Solution</h1>
+      <div class="search">
+        <input type="text" id="seachbox" placeholder="Type item name" />
+        <button id="search">
+          <i class="fa-brands fa-searchengin"></i> Search
+        </button>
+      </div>
+    </div>
+    <div class="main">
+      <div class="electronics">
+        <button id="electronics">
+          <img src="res\Electronics.jpg" alt="Electronics Logo" />
+        </button>
+        <p>Electronis</p>
+      </div>
+      <div class="sports">
+        <button id="sports">
+          <img src="res\Sports.jfif" alt="sports Logo" />
+        </button>
+        <p>Sports</p>
+      </div>
+      <div class="dailyNeeds">
+        <button id="dailyNeeds">
+          <img src="res\DailyNeeds.jpg" alt="DailyNeeds Logo" />
+        </button>
+        <p>DailyNeeds</p>
+      </div>
+      <div class="fashion">
+        <button id="fashion">
+          <img src="res\Fashion.jpg" alt="fashion Logo" />
+        </button>
+        <p>fashion</p>
+      </div>
+      <div class="more">
+        <button id="more">See More..</button>
+      </div>
+      <div class="deals">
+        <p>Top Deals of Here</p>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="buttons">
+        <button id="cart">
+          <i class="fa-solid fa-cart-arrow-down"></i>Cart
+        </button>
+        <button id="you"><i class="fa-regular fa-user"></i>You</button>
+        <button id="menu"><i class="fa-solid fa-bars"></i>Menu</button>
+        <button id="home"><i class="fa-regular fa-house"></i>Home</button>
+        <p id="devnote">Made with love by BhatMajid</p>
+      </div>
+    </div>
     <script src="app.js"></script>
-
-</body>
+  </body>
 </html>

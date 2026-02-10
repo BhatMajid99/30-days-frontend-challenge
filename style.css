@@ -1,7 +1,70 @@
-body.dark{
-    background-color: black;
-    color: white;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body.light{
-    background-color: white;
+
+.heading {
+  height: 10vh;
+  width: 100vw;
+  background-color: #f0dd92;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  height: 80vh;
+  width: 100vw;
+  background-color: #ffffc5;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main div button {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+.main div {
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  background-color: #d6e4aa;
+}
+img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+.footer .buttons {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 10vh;
+  background: #83b582;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.buttons button {
+  cursor: pointer;
+}
+#devnote {
+  max-height: 50px;
+  max-width: 100;
+  background-color: antiquewhite;
+  color: black;
+  display: flex;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 10px;
 }
