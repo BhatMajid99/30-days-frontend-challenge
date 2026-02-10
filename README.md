@@ -33,5 +33,10 @@ Daily frontend practice using JavaScript.
 - Converted callback-based code into async/await
 - Practiced Promise handling with try-catch
 - Handled API error responses
+  ## Day 9
+- Practiced HTML and CSS by building a shopping-style UI layout
+- Designed header, search bar, category cards, and footer navigation
+- Prepared UI foundation for future JavaScript-based mini projects
+
 
 
