@@ -37,6 +37,8 @@ Daily frontend practice using JavaScript.
 - Practiced HTML and CSS by building a shopping-style UI layout
 - Designed header, search bar, category cards, and footer navigation
 - Prepared UI foundation for future JavaScript-based mini projects
-
-
+  ## Day 10
+ - Fetch users from JSONPlaceholder API
+- Dynamically render user cards
+- Style & Search logic pending
 
