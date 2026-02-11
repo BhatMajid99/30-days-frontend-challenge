@@ -1,68 +1,44 @@
-// // Function 
-// const getdata = (dataId, getNextData) =>{
-//     setTimeout( () => {
-//         console.log("Data", dataId);
-//         if(getNextData){
-//             getNextData(dataId);
-//         }
-//     },3000);
-// }
-// // Callback Hell
-// console.log("Getting Data 1....");
-// getdata(1, () =>{
-//     console.log("Getting Data 2....");
-//     getdata(2, () =>{
-//         console.log("Getting Data 3....");
-//         getdata(3, () =>{
-//             console.log("Getting Data 4....");
-//             getdata(4)
-//         });
-//     });
-// });
+let inputName = document.querySelector("#inputName");
+let seachBtn = document.querySelector("#SeachBtn");
+let container = document.querySelector(".container");
+let getUsersBtn = document.querySelector("#getUsersBtn");
+let allUsers = [];
 
-// // ASync Await
-// async function  getdata(dataId) {
-//     return new Promise((resolve, reject) =>{
-//         setTimeout(() => {
-//             console.log("data ",dataId);
-//             if(dataId <= 5){
-//                 resolve("Sucess");
-//             }else{
-//                 reject(new Error("Data <=5 avalibe only !"));
-//             }
-//         },2000);
-//     });
-// }
-// async function run() {
-//     try{
-//         console.log("Getting Data 1....");
-//         await getdata(1);
-//         console.log("Getting Data 2....");
-//         await getdata(2);
-//         console.log("Getting Data 3....");
-//         await getdata(3);
-//         console.log("Getting Data 4....");
-//         await getdata(4); 
-//         console.log("Getting Data 5....");
-//         await getdata(5);
-//         console.log("Getting Data 6....");
-//         await getdata(6);
-//     }
-//     catch(err){
-//         console.error(err.message);
-//     }
-// }
-// run();
-let URL = "https://catfact.ninja/fact";
-async function getFact(URL) {
-    try{
-        let respone = await fetch(URL);
-        let data = await respone.json();
-        console.log(data.fact);
-    }catch(err){
-        console.error("Error : ", err)
+
+seachBtn.addEventListener("click", () =>{
+    let userName = inputName.value.trim();
+    console.log(userName);
+    inputName.value = "";
+});
+let URL = "https://jsonplaceholder.typicode.com/users";
+async function getUsers(){
+    let response = await fetch(URL);
+    let users = await response.json();
+    allUsers = users;
+    console.log(users);
+    loadCards(users);
+}
+const loadCards = (users) =>{
+    container.innerHTML = "";
+    for(let user of users){
+        let myCard = document.createElement("ul");
+        container.appendChild(myCard);
+        let li0 = document.createElement("li");
+        li0.innerText = `ID : ${user.id}`;
+        myCard.appendChild(li0);
+        let li1 = document.createElement("li");
+        li1.innerText = `Name : ${user.name}`
+        myCard.appendChild(li1);
+        let li2 = document.createElement("li");
+        li2.innerText = `Email : ${user.email}`
+        myCard.appendChild(li2);
+        let li3 = document.createElement("li");
+        li3.innerText = `Phone :${user.phone}`
+        myCard.appendChild(li3);
     }
 
 }
 
-getFact(URL);
+getUsersBtn.addEventListener("click", () =>{
+    getUsers();
+})
