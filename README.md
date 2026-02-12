@@ -41,4 +41,6 @@ Daily frontend practice using JavaScript.
  - Fetch users from JSONPlaceholder API
 - Dynamically render user cards
 - Style & Search logic pending
-
+ ## Day 11
+ - Working on same project
+ - still some part left
